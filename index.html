@@ -1,1 +1,35 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FutureTasks: Advanced Todo List with Timestamps and Toggle Log</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="current-datetime">Jul 22, 2024, 05:49:03 PM</div>
+        <h1>FutureTasks</h1>
+        <form id="task-form" method="GET" action="https://websim.io/todo/add">
+          <input type="text" id="task-input" name="task" placeholder="New task..." required="">
+          <input type="text" id="allotted-time" name="allotted-time" placeholder="Allotted time (e.g. 2h 30m)" required="">
+          <button type="submit" id="add-task">Add</button>
+        </form>
+        <ul id="task-list"></ul>
+        <button id="toggle-log">Toggle Log</button>
+        <div id="log-content">
+          <div class="log-tabs">
+            <button class="log-tab active" data-view="day">Day</button>
+            <button class="log-tab" data-view="week">Week</button>
+            <button class="log-tab" data-view="month">Month</button>
+          </div>
+          <div id="day-view" class="log-view active"></div>
+          <div id="week-view" class="log-view"></div>
+          <div id="month-view" class="log-view"></div>
+        </div>
+      </div>
+      <button id="stealth-toggle">+</button>
+      <script src="script.js"></script>
+    
+</body>
+</html>
